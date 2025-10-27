@@ -46,7 +46,7 @@ namespace Assignment_2
             s1.Display();
             s2.Display();
             s3.Display();
-            Console.WriteLine("Developed By Vansh Roll-51");
+            Console.WriteLine("Developed By divyanshi Roll-13");
         }
     }
 }

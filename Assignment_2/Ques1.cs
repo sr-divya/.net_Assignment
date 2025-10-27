@@ -60,7 +60,7 @@ namespace Assignment_2
 
             user1.Display();
             user2.Display();
-            Console.WriteLine("Developed By Vansh Roll-51");
+            Console.WriteLine("Developed By divyanshi Roll-13");
         }
     }
 }
