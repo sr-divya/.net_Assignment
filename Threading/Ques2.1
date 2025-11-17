@@ -1,0 +1,32 @@
+﻿using System;
+using System.Threading;
+
+class Program
+{
+    static int counter = 0;
+
+    static void Increment()
+    {
+        for (int i = 0; i < 1000000; i++)
+        {
+            counter++; // Not thread-safe
+        }
+    }
+
+    static void Main()
+    {
+        Thread[] threads = new Thread[4];
+
+        for (int i = 0; i < 4; i++)
+        {
+            threads[i] = new Thread(Increment);
+            threads[i].Start();
+        }
+
+        foreach (Thread t in threads)
+            t.Join();
+
+        Console.WriteLine($"Final Counter (without Interlocked): {counter}");
+    }
+}
+
